@@ -5,6 +5,7 @@ import {
   IconBrandInstagram,
 } from "@tabler/icons";
 import { MantineLogo } from "@mantine/ds";
+import links from "./constants";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -31,29 +32,6 @@ const useStyles = createStyles((theme) => ({
     },
   },
 }));
-
-const links = [
-  {
-    link: "#",
-    label: "Contact",
-  },
-  {
-    link: "#",
-    label: "Privacy",
-  },
-  {
-    link: "#",
-    label: "Blog",
-  },
-  {
-    link: "#",
-    label: "Store",
-  },
-  {
-    link: "#",
-    label: "Careers",
-  },
-];
 
 export default function AppFooter() {
   const { classes } = useStyles();
