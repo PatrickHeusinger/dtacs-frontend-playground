@@ -1,37 +1,83 @@
-import { AppShell, Drawer, Header } from '@mantine/core';
-import { Navbar } from './Navbar';
-import { Outlet } from 'react-router-dom';
+import { AppShell, Drawer, Header, Footer } from "@mantine/core";
+import { Navbar } from "./Navbar";
+import { Outlet } from "react-router-dom";
+import AppFooter from "./AppFooter";
 
+let data = [
+  {
+    link: "#",
+    label: "",
+  },
+];
 
- let data = [
-    {
-      "link": "#",
-      "label": ""
-    },
-   
-  ]
+let user = [
+  {
+    link: "#",
+    label: "Privacy & Security",
+  },
+  {
+    link: "#",
+    label: "Account settings",
+  },
+  {
+    link: "#",
+    label: "Support options",
+  },
+];
 
-  let user = [
-    {
-      "link": "#",
-      "label": ""
-    },
-  
-  ]
-
+let items = [
+  {
+    link: "#",
+    label: "Contact",
+  },
+  {
+    link: "#",
+    label: "Privacy",
+  },
+  {
+    link: "#",
+    label: "Blog",
+  },
+  {
+    link: "#",
+    label: "Store",
+  },
+  {
+    link: "#",
+    label: "Careers",
+  },
+];
 
 export function MainFrame() {
   return (
-    <AppShell 
-      padding="md"  
-      header={<Header height={60} p="xs">{<Navbar mainLinks={data} userLinks={user} />}</Header>}
+    <AppShell
+      padding="md"
+      header={
+        <Header height={60} p="xs">
+          {<Navbar mainLinks={data} userLinks={user} />}
+        </Header>
+      }
+      footer={
+        <Footer height={60} p="md">
+          {<AppFooter links={items} />}
+        </Footer>
+      }
       styles={(theme) => ({
-        main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] },
+        main: {
+          backgroundColor:
+            theme.colorScheme === "dark"
+              ? theme.colors.dark[8]
+              : theme.colors.gray[0],
+        },
       })}
     >
-      <Drawer opened={false} onClose={function (): void {
-              throw new Error('Function not implemented.');
-          } } />
+      <Drawer
+        opened={false}
+        onClose={function (): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
+
       <Outlet />
     </AppShell>
   );
