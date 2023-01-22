@@ -1,33 +1,42 @@
-import { useState } from 'react';
-import { createStyles, Header, Container, Anchor, Group, Burger } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import { MantineLogo } from '@mantine/ds';
+import { useState } from "react";
+import { useLocation, Link } from "react-router-dom";
+import {
+  createStyles,
+  Header,
+  Container,
+  Anchor,
+  Group,
+  Burger,
+  
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { MantineLogo } from "@mantine/ds";
 
 const HEADER_HEIGHT = 84;
 
 const useStyles = createStyles((theme) => ({
   inner: {
     height: HEADER_HEIGHT,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
 
   burger: {
-    [theme.fn.largerThan('sm')]: {
-      display: 'none',
+    [theme.fn.largerThan("sm")]: {
+      display: "none",
     },
   },
 
   links: {
     paddingTop: theme.spacing.lg,
     height: HEADER_HEIGHT,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
 
-    [theme.fn.smallerThan('sm')]: {
-      display: 'none',
+    [theme.fn.smallerThan("sm")]: {
+      display: "none",
     },
   },
 
@@ -36,35 +45,42 @@ const useStyles = createStyles((theme) => ({
   },
 
   mainLink: {
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
     fontSize: 13,
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[6],
+    color:
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[1]
+        : theme.colors.gray[6],
     padding: `7px ${theme.spacing.sm}px`,
     fontWeight: 700,
-    borderBottom: '2px solid transparent',
-    transition: 'border-color 100ms ease, color 100ms ease',
+    borderBottom: "2px solid transparent",
+    transition: "border-color 100ms ease, color 100ms ease",
 
-    '&:hover': {
-      color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-      textDecoration: 'none',
+    "&:hover": {
+      color: theme.colorScheme === "dark" ? theme.white : theme.black,
+      textDecoration: "none",
     },
   },
 
   secondaryLink: {
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[2] : theme.colors.gray[6],
+    color:
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[2]
+        : theme.colors.gray[6],
     fontSize: theme.fontSizes.xs,
-    textTransform: 'uppercase',
-    transition: 'color 100ms ease',
+    textTransform: "uppercase",
+    transition: "color 100ms ease",
 
-    '&:hover': {
-      color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-      textDecoration: 'none',
+    "&:hover": {
+      color: theme.colorScheme === "dark" ? theme.white : theme.black,
+      textDecoration: "none",
     },
   },
 
   mainLinkActive: {
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    borderBottomColor: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 5 : 6],
+    color: theme.colorScheme === "dark" ? theme.white : theme.black,
+    borderBottomColor:
+      theme.colors[theme.primaryColor][theme.colorScheme === "dark" ? 5 : 6],
   },
 }));
 
@@ -78,18 +94,31 @@ interface DoubleHeaderProps {
   userLinks: LinkProps[];
 }
 
-export function Navbar({ mainLinks, userLinks }: DoubleHeaderProps) {
+export function Navbar({ userLinks }: DoubleHeaderProps) {
   const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
   const [active, setActive] = useState(0);
+  const location = useLocation();
+
+  const mainLinks = [
+    { link: "/", label: "Homepage" },
+    { link: "/dashboard", label: "Dashboard" },
+    { link: "/community", label: "Community" },
+    { link: "/academy", label: "Academy" },
+  ];
+
 
   const mainItems = mainLinks.map((item, index) => (
-    <Anchor<'a'>
-      href={item.link}
+    <Anchor
+      component={Link}
+      to={item.link}
       key={item.label}
-      className={cx(classes.mainLink, { [classes.mainLinkActive]: index === active })}
+     // value={location.pathname}
+      className={cx(classes.mainLink, {
+        [classes.mainLinkActive]: location.pathname === item.link,
+      })}
       onClick={(event) => {
-        event.preventDefault();
+       // event.preventDefault();
         setActive(index);
       }}
     >
@@ -97,9 +126,12 @@ export function Navbar({ mainLinks, userLinks }: DoubleHeaderProps) {
     </Anchor>
   ));
 
+  
+
   const secondaryItems = userLinks.map((item) => (
-    <Anchor<'a'>
-      href={item.link}
+    <Anchor
+      component={Link}
+      to={item.link}
       key={item.label}
       onClick={(event) => event.preventDefault()}
       className={classes.secondaryLink}
@@ -118,7 +150,12 @@ export function Navbar({ mainLinks, userLinks }: DoubleHeaderProps) {
             {mainItems}
           </Group>
         </div>
-        <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
+        <Burger
+          opened={opened}
+          onClick={toggle}
+          className={classes.burger}
+          size="sm"
+        />
       </Container>
     </Header>
   );

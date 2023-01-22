@@ -1,55 +1,38 @@
-import { AppShell, Header } from '@mantine/core';
+import { AppShell, Drawer, Header } from '@mantine/core';
 import { Navbar } from './Navbar';
+import { Outlet } from 'react-router-dom';
 
-let data = [
-    {
-      "link": "demo",
-      "label": "Book a demo"
-    },
+
+ let data = [
     {
       "link": "#",
-      "label": "Documentation"
+      "label": ""
     },
-    {
-      "link": "#",
-      "label": "Community"
-    },
-    {
-      "link": "#",
-      "label": "Academy"
-    },
-    {
-      "link": "#",
-      "label": "Forums"
-    }
+   
   ]
 
   let user = [
     {
       "link": "#",
-      "label": "Privacy & Security"
+      "label": ""
     },
-    {
-      "link": "#",
-      "label": "Account settings"
-    },
-    {
-      "link": "#",
-      "label": "Support options"
-    }
+  
   ]
 
 
 export function MainFrame() {
   return (
-    <AppShell
-      padding="md"   
+    <AppShell 
+      padding="md"  
       header={<Header height={60} p="xs">{<Navbar mainLinks={data} userLinks={user} />}</Header>}
       styles={(theme) => ({
         main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] },
       })}
     >
-      {/* Your application here */}
+      <Drawer opened={false} onClose={function (): void {
+              throw new Error('Function not implemented.');
+          } } />
+      <Outlet />
     </AppShell>
   );
 }
