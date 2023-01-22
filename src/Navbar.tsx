@@ -7,7 +7,6 @@ import {
   Anchor,
   Group,
   Burger,
-  
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantine/ds";
@@ -84,17 +83,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-interface LinkProps {
-  label: string;
-  link: string;
-}
-
-interface DoubleHeaderProps {
-  mainLinks: LinkProps[];
-  userLinks: LinkProps[];
-}
-
-export function Navbar({ userLinks }: DoubleHeaderProps) {
+export function Navbar() {
   const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
   const [active, setActive] = useState(0);
@@ -107,18 +96,15 @@ export function Navbar({ userLinks }: DoubleHeaderProps) {
     { link: "/academy", label: "Academy" },
   ];
 
-
   const mainItems = mainLinks.map((item, index) => (
     <Anchor
       component={Link}
       to={item.link}
       key={item.label}
-     // value={location.pathname}
       className={cx(classes.mainLink, {
         [classes.mainLinkActive]: location.pathname === item.link,
       })}
       onClick={(event) => {
-       // event.preventDefault();
         setActive(index);
       }}
     >
@@ -126,9 +112,22 @@ export function Navbar({ userLinks }: DoubleHeaderProps) {
     </Anchor>
   ));
 
-  
+  const userLink = [
+    {
+      link: "#",
+      label: "Privacy & Security",
+    },
+    {
+      link: "#",
+      label: "Account settings",
+    },
+    {
+      link: "#",
+      label: "Support options",
+    },
+  ];
 
-  const secondaryItems = userLinks.map((item) => (
+  const secondaryItems = userLink.map((item) => (
     <Anchor
       component={Link}
       to={item.link}

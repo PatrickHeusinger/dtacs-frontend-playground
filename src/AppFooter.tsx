@@ -32,11 +32,30 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-interface FooterCenteredProps {
-  links: { link: string; label: string }[];
-}
+const links = [
+  {
+    link: "#",
+    label: "Contact",
+  },
+  {
+    link: "#",
+    label: "Privacy",
+  },
+  {
+    link: "#",
+    label: "Blog",
+  },
+  {
+    link: "#",
+    label: "Store",
+  },
+  {
+    link: "#",
+    label: "Careers",
+  },
+];
 
-export default function AppFooter({ links }: FooterCenteredProps) {
+export default function AppFooter() {
   const { classes } = useStyles();
   const items = links.map((link) => (
     <Anchor<"a">

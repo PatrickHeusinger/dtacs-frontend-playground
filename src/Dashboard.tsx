@@ -19,8 +19,6 @@ export function Dashboard() {
         <Grid.Col xs={6}>{child}</Grid.Col>
         <Grid.Col xs={4}>{child}</Grid.Col>
         <Grid.Col xs={8}>{child}</Grid.Col>
-        <Grid.Col xs={8}>{child}</Grid.Col>
-        <Grid.Col xs={4}>{child}</Grid.Col>
       </Grid>
     </Box>
   );

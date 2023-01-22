@@ -3,63 +3,18 @@ import { Navbar } from "./Navbar";
 import { Outlet } from "react-router-dom";
 import AppFooter from "./AppFooter";
 
-let data = [
-  {
-    link: "#",
-    label: "",
-  },
-];
-
-let user = [
-  {
-    link: "#",
-    label: "Privacy & Security",
-  },
-  {
-    link: "#",
-    label: "Account settings",
-  },
-  {
-    link: "#",
-    label: "Support options",
-  },
-];
-
-let items = [
-  {
-    link: "#",
-    label: "Contact",
-  },
-  {
-    link: "#",
-    label: "Privacy",
-  },
-  {
-    link: "#",
-    label: "Blog",
-  },
-  {
-    link: "#",
-    label: "Store",
-  },
-  {
-    link: "#",
-    label: "Careers",
-  },
-];
-
 export function MainFrame() {
   return (
     <AppShell
       padding="md"
       header={
         <Header height={60} p="xs">
-          {<Navbar mainLinks={data} userLinks={user} />}
+          {<Navbar />}
         </Header>
       }
       footer={
         <Footer height={80} p="xs">
-          {<AppFooter links={items} />}
+          {<AppFooter />}
         </Footer>
       }
       styles={(theme) => ({
