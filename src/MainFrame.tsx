@@ -58,7 +58,7 @@ export function MainFrame() {
         </Header>
       }
       footer={
-        <Footer height={60} p="md">
+        <Footer height={80} p="xs">
           {<AppFooter links={items} />}
         </Footer>
       }
