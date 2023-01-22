@@ -1,3 +1,25 @@
+const mainLinks = [
+    { link: "/", label: "Homepage" },
+    { link: "/dashboard", label: "Dashboard" },
+    { link: "/community", label: "Community" },
+    { link: "/academy", label: "Academy" },
+  ];
+
+const userLink = [
+    {
+      link: "#",
+      label: "Privacy & Security",
+    },
+    {
+      link: "#",
+      label: "Account settings",
+    },
+    {
+      link: "#",
+      label: "Support options",
+    },
+  ];
+
 const links = [
     {
       link: "#",
@@ -21,4 +43,7 @@ const links = [
     },
   ];
 
-  export default links;
+  export {links, userLink, mainLinks };
+
+  
+  

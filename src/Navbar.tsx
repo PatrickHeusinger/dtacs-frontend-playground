@@ -10,6 +10,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantine/ds";
+import { userLink, mainLinks } from "./constants";
 
 const HEADER_HEIGHT = 84;
 
@@ -89,13 +90,6 @@ export function Navbar() {
   const [active, setActive] = useState(0);
   const location = useLocation();
 
-  const mainLinks = [
-    { link: "/", label: "Homepage" },
-    { link: "/dashboard", label: "Dashboard" },
-    { link: "/community", label: "Community" },
-    { link: "/academy", label: "Academy" },
-  ];
-
   const mainItems = mainLinks.map((item, index) => (
     <Anchor
       component={Link}
@@ -111,21 +105,6 @@ export function Navbar() {
       {item.label}
     </Anchor>
   ));
-
-  const userLink = [
-    {
-      link: "#",
-      label: "Privacy & Security",
-    },
-    {
-      link: "#",
-      label: "Account settings",
-    },
-    {
-      link: "#",
-      label: "Support options",
-    },
-  ];
 
   const secondaryItems = userLink.map((item) => (
     <Anchor
