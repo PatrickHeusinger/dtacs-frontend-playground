@@ -4,7 +4,7 @@ import HeroPage from "./HeroPage";
 
 export default function HomePage() {
   return (
-    <Box sx={{ padding: "40px" }}>
+    <Box sx={{ padding: "80px" }}>
       <HeroPage />
     </Box>
   );

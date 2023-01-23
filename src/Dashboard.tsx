@@ -6,9 +6,10 @@ export function Dashboard() {
   return (
     <Box
       sx={{
-        padding: "40px",
+        padding: "80px",height:'100%'
       }}
     >
+      
       <Grid>
         <Grid.Col xs={4}>{child}</Grid.Col>
         <Grid.Col xs={8}>{child}</Grid.Col>
@@ -20,6 +21,7 @@ export function Dashboard() {
         <Grid.Col xs={4}>{child}</Grid.Col>
         <Grid.Col xs={8}>{child}</Grid.Col>
       </Grid>
+     
     </Box>
   );
 }

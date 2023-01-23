@@ -1,8 +1,8 @@
 const mainLinks = [
-    { link: "/", label: "Homepage" },
-    { link: "/dashboard", label: "Dashboard" },
-    { link: "/community", label: "Community" },
-    { link: "/academy", label: "Academy" },
+    { link: "/", label: "Home" },
+    { link: "/dashboard", label: "Board" },
+    { link: "/community", label: "Table" },
+    { link: "/academy", label: "Example" },
   ];
 
 const userLink = [

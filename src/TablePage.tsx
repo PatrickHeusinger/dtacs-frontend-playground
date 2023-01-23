@@ -83,7 +83,7 @@ export default function TablePage({ data }: TableReviewsProps) {
   });
 
   return (
-    <ScrollArea sx={{ padding: "40px" }}>
+    <ScrollArea sx={{ padding: "80px" }}>
       <Table sx={{ minWidth: 800 }} verticalSpacing="xs">
         <thead>
           <tr>

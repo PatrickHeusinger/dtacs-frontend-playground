@@ -6,7 +6,7 @@ import {
   Container,
   Anchor,
   Group,
-  Burger,
+  
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantine/ds";
@@ -15,12 +15,22 @@ import { userLink, mainLinks } from "./constants";
 const HEADER_HEIGHT = 84;
 
 const useStyles = createStyles((theme) => ({
-  inner: {
-    height: HEADER_HEIGHT,
+
+  header: {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    paddingLeft: '100px',
+    paddingRight: '100px',
+    width:'100%'
   },
+
+  // inner: {
+  //   height: HEADER_HEIGHT,
+  //   display: "flex",
+  //   alignItems: "center",
+  //   justifyContent: "space-between",
+  // },
 
   burger: {
     [theme.fn.largerThan("sm")]: {
@@ -34,6 +44,7 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    
 
     [theme.fn.smallerThan("sm")]: {
       display: "none",
@@ -85,7 +96,6 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function Navbar() {
-  const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
   const [active, setActive] = useState(0);
   const location = useLocation();
@@ -106,35 +116,17 @@ export function Navbar() {
     </Anchor>
   ));
 
-  const secondaryItems = userLink.map((item) => (
-    <Anchor
-      component={Link}
-      to={item.link}
-      key={item.label}
-      onClick={(event) => event.preventDefault()}
-      className={classes.secondaryLink}
-    >
-      {item.label}
-    </Anchor>
-  ));
+  
 
   return (
-    <Header height={HEADER_HEIGHT} mb={120}>
-      <Container className={classes.inner}>
-        <MantineLogo size={34} />
-        <div className={classes.links}>
-          <Group position="right">{secondaryItems}</Group>
+    <Header className={classes.header} height={HEADER_HEIGHT} mb={120}>
+       <MantineLogo size={34} />
+      <div className={classes.links}>
+         <Group position="right"> {/* placeholder*/}</Group> 
           <Group spacing={0} position="right" className={classes.mainLinks}>
             {mainItems}
           </Group>
         </div>
-        <Burger
-          opened={opened}
-          onClick={toggle}
-          className={classes.burger}
-          size="sm"
-        />
-      </Container>
     </Header>
   );
 }
