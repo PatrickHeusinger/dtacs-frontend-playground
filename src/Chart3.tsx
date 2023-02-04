@@ -37,7 +37,7 @@ const series = [
 
 export default function App() {
   return (
-      <Box sx={{display:'flex', justifyContent:'center', padding: "100px" }}>
+      <Box sx={{display:'flex', justifyContent:'center', padding: "120px" }}>
       <LineChart width={800} height={400}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis
