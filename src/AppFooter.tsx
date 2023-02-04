@@ -6,7 +6,7 @@ import {
 } from "@tabler/icons";
 
 import { links } from "./constants";
-import Logo from './dt_logo.png';
+import Logo from './dt_logo_xl.png';
 const useStyles = createStyles((theme) => ({
   footer: {
     borderTop: `0px ${
