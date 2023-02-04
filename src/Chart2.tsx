@@ -88,7 +88,7 @@ const CustomizedAxisTick: FunctionComponent<any> = (props: any) => {
 
 export default function Chart2() {
   return (
-      <Box sx={{display:'flex', justifyContent:'center', padding: "120px" }}>
+      <Box pt={160} sx={{display:'flex', justifyContent:'center' }}>
       <LineChart
           width={800}
           height={400}

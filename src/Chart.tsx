@@ -58,7 +58,7 @@ const data = [
 
 export default function Chart() {
   return (
-      <Box sx={{display:'flex', justifyContent:'center', padding: "120px" }}>
+      <Box pt={160} sx={{display:'flex', justifyContent:'center' }}>
       <AreaChart
           width={800}
           height={400}
