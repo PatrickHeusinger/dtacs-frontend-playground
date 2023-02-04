@@ -38,7 +38,7 @@ const data = [
     LufthansaTechnik: 2000
   },
   {
-    name: "Mai 2022",
+    name: "May 2022",
     LufthansaCargo: 1890,
     LufthansaGroup: 2800,
     LufthansaTechnik: 2181

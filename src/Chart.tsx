@@ -37,7 +37,7 @@ const data = [
     amt: 3000
   },
   {
-    name: "Mai 2022",
+    name: "May 2022",
     uv: 4890,
     pv: 4800,
     amt: 4181
