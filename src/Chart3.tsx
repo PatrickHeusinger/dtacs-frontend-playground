@@ -15,7 +15,7 @@ const series = [
     name: "Lufthansa Group",
     stroke: "#05164D",
     data: [
-      { category: "Jan 2022", value: 1300 },
+      { category: "Jan 2022", value: 1900 },
       { category: "Feb 2022", value: 1400 },
       { category: "Mar 2022", value: 1600 },
       { category: "Apr 2022", value: 1900 },
@@ -70,7 +70,7 @@ export default function App() {
             allowDuplicatedCategory={false}
         />
         <YAxis dataKey="value" />
-        <Tooltip />
+        {/*<Tooltip />*/}
         <Legend />
 
         {series.map((s) => (
