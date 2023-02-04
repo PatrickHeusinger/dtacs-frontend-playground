@@ -15,45 +15,45 @@ import {
 const data = [
   {
     name: "Jan 2022",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400
+    Lufthansa_Cargo: 4000,
+    Lufthansa_Group: 2400,
+    Lufthansa_Technik: 2400
   },
   {
     name: "Feb 2022",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210
+    Lufthansa_Cargo: 3000,
+    Lufthansa_Group: 1398,
+    Lufthansa_Technik: 2210
   },
   {
     name: "Mar 2022",
-    uv: 2000,
-    pv: 2800,
-    amt: 2290
+    Lufthansa_Cargo: 2000,
+    Lufthansa_Group: 2800,
+    Lufthansa_Technik: 2290
   },
   {
     name: "Apr 2022",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000
+    Lufthansa_Cargo: 2780,
+    Lufthansa_Group: 3908,
+    Lufthansa_Technik: 2000
   },
   {
     name: "Mai 2022",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181
+    Lufthansa_Cargo: 1890,
+    Lufthansa_Group: 2800,
+    Lufthansa_Technik: 2181
   },
   {
     name: "Jun 2022",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500
+    Lufthansa_Cargo: 2390,
+    Lufthansa_Group: 3800,
+    Lufthansa_Technik: 2500
   },
   {
     name: "Jul 2022",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100
+    Lufthansa_Cargo: 3490,
+    Lufthansa_Group: 4300,
+    Lufthansa_Technik: 2100
   }
 ];
 
@@ -105,10 +105,11 @@ export default function Chart2() {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="uv" stroke="#FFAD00">
+        <Line type="monotone" dataKey="Lufthansa_Group" stroke="#05164D" />
+        <Line type="monotone" dataKey="Lufthansa_Cargo" stroke="#FFAD00">
           <LabelList content={<CustomizedLabel />} />
         </Line>
-        <Line type="monotone" dataKey="pv" stroke="#05164D" />
+        <Line type="monotone" dataKey="Lufthansa_Technik" stroke="#A9DADB" />
       </LineChart>
       </Box>
   );
