@@ -61,7 +61,7 @@ const CustomizedLabel: FunctionComponent<any> = (props: any) => {
 
 export default function App() {
   return (
-      <Box p={40} mt={120} sx={{display:'flex', justifyContent:'center', backgroundColor:'#E7E8ED' }}>
+      <Box p={40} mt={120} sx={{display:'flex', justifyContent:'center' }}>
       <LineChart width={800} height={400}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis
