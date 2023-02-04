@@ -15,45 +15,45 @@ import {
 const data = [
   {
     name: "Jan 2022",
-    Lufthansa_Cargo: 4000,
-    Lufthansa_Group: 2400,
-    Lufthansa_Technik: 2400
+    LufthansaCargo: 4000,
+    LufthansaGroup: 2400,
+    LufthansaTechnik: 2400
   },
   {
     name: "Feb 2022",
-    Lufthansa_Cargo: 3000,
-    Lufthansa_Group: 1398,
-    Lufthansa_Technik: 2210
+    LufthansaCargo: 3000,
+    LufthansaGroup: 1398,
+    LufthansaTechnik: 2210
   },
   {
     name: "Mar 2022",
-    Lufthansa_Cargo: 2000,
-    Lufthansa_Group: 2800,
-    Lufthansa_Technik: 2290
+    LufthansaCargo: 2000,
+    LufthansaGroup: 2800,
+    LufthansaTechnik: 2290
   },
   {
     name: "Apr 2022",
-    Lufthansa_Cargo: 2780,
-    Lufthansa_Group: 3908,
-    Lufthansa_Technik: 2000
+    LufthansaCargo: 2780,
+    LufthansaGroup: 3908,
+    LufthansaTechnik: 2000
   },
   {
     name: "Mai 2022",
-    Lufthansa_Cargo: 1890,
-    Lufthansa_Group: 2800,
-    Lufthansa_Technik: 2181
+    LufthansaCargo: 1890,
+    LufthansaGroup: 2800,
+    LufthansaTechnik: 2181
   },
   {
     name: "Jun 2022",
-    Lufthansa_Cargo: 2390,
-    Lufthansa_Group: 3800,
-    Lufthansa_Technik: 2500
+    LufthansaCargo: 2390,
+    LufthansaGroup: 3800,
+    LufthansaTechnik: 2500
   },
   {
     name: "Jul 2022",
-    Lufthansa_Cargo: 3490,
-    Lufthansa_Group: 4300,
-    Lufthansa_Technik: 2100
+    LufthansaCargo: 3490,
+    LufthansaGroup: 4300,
+    LufthansaTechnik: 2100
   }
 ];
 
@@ -105,11 +105,11 @@ export default function Chart2() {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="Lufthansa_Group" stroke="#05164D" />
-        <Line type="monotone" dataKey="Lufthansa_Cargo" stroke="#FFAD00">
+        <Line type="monotone" dataKey="LufthansaGroup" stroke="#05164D" />
+        <Line type="monotone" dataKey="LufthansaCargo" stroke="#FFAD00">
           <LabelList content={<CustomizedLabel />} />
         </Line>
-        <Line type="monotone" dataKey="Lufthansa_Technik" stroke="#A9DADB" />
+        <Line type="monotone" dataKey="LufthansaTechnik" stroke="#A9DADB" />
       </LineChart>
       </Box>
   );

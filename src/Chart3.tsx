@@ -5,39 +5,63 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend
+  Legend,
+  LabelList
 } from "recharts";
 import { Box } from "@mantine/core";
+import React, {FunctionComponent} from "react";
 const series = [
   {
-    name: "Series 1",
+    name: "Lufthansa Group",
+    stroke: "#05164D",
     data: [
-      { category: "A", value: Math.random() },
-      { category: "B", value: Math.random() },
-      { category: "C", value: Math.random() }
+      { category: "A", value: 1300 },
+      { category: "B", value: 1400 },
+      { category: "C", value: 1800 },
+      { category: "D", value: 1900 },
+      { category: "E", value: 1700 },
+
     ]
   },
   {
-    name: "Series 2",
+    name: "Lufthansa Cargo",
+    stroke: "#FFAD00",
     data: [
-      { category: "B", value: Math.random() },
-      { category: "C", value: Math.random() },
-      { category: "D", value: Math.random() }
+      { category: "A", value: 2300 },
+      { category: "B", value: 2100 },
+      { category: "C", value: 1900 },
+      { category: "D", value: 2300 },
+      { category: "E", value: 2400 },
+
     ]
   },
   {
-    name: "Series 3",
+    name: "Lufthansa Technik",
+    stroke: "#A9DADB",
     data: [
-      { category: "C", value: Math.random() },
-      { category: "D", value: Math.random() },
-      { category: "E", value: Math.random() }
+      { category: "A", value: 2600 },
+      { category: "B", value: 2650 },
+      { category: "C", value: 2300 },
+      { category: "D", value: 2600 },
+      { category: "E", value: 2400 },
+
     ]
   }
 ];
 
+const CustomizedLabel: FunctionComponent<any> = (props: any) => {
+  const { x, y, stroke, value } = props;
+
+  return (
+      <text x={x} y={y} dy={-4} fill={stroke} fontSize={10} textAnchor="middle">
+        {value}
+      </text>
+  );
+};
+
 export default function App() {
   return (
-      <Box pt={160} sx={{display:'flex', justifyContent:'center' }}>
+      <Box p={40} mt={120} sx={{display:'flex', justifyContent:'center', backgroundColor:'#E7E8ED' }}>
       <LineChart width={800} height={400}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis
@@ -48,10 +72,14 @@ export default function App() {
         <YAxis dataKey="value" />
         <Tooltip />
         <Legend />
+
         {series.map((s) => (
-            <Line dataKey="value" data={s.data} name={s.name} key={s.name} />
+            <Line dataKey="value" data={s.data} name={s.name} key={s.name} stroke={s.stroke} >
+              <LabelList content={<CustomizedLabel />} />
+            </Line>
         ))}
       </LineChart>
       </Box>
   );
 }
+
