@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
+import Logo from './dt_logo2.png';
+
 import {
   createStyles,
   Header,
   Container,
   Anchor,
   Group,
+  Image
   
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
@@ -90,8 +93,8 @@ const useStyles = createStyles((theme) => ({
 
   mainLinkActive: {
     color: theme.colorScheme === "dark" ? theme.white : theme.black,
-    borderBottomColor:
-      theme.colors[theme.primaryColor][theme.colorScheme === "dark" ? 5 : 6],
+    borderBottomColor: '#1883AD'
+     // theme.colors[theme.primaryColor][theme.colorScheme === "dark" ? 5 : 6],
   },
 }));
 
@@ -119,8 +122,8 @@ export function Navbar() {
   
 
   return (
-    <Header className={classes.header} height={HEADER_HEIGHT} mb={120}>
-       <MantineLogo size={34} />
+    <Header className={classes.header} height={HEADER_HEIGHT}  mb={120}>
+       <Image width={200} src={Logo} />
       <div className={classes.links}>
          <Group position="right"> {/* placeholder*/}</Group> 
           <Group spacing={0} position="right" className={classes.mainLinks}>

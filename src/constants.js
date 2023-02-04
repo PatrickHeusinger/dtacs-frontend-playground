@@ -1,8 +1,9 @@
 const mainLinks = [
-    { link: "/", label: "Home" },
-    { link: "/dashboard", label: "Board" },
-    { link: "/community", label: "Table" },
-    { link: "/academy", label: "Example" },
+    { link: "/", label: "Start" },
+    { link: "/chart_one", label: "Chart 1" },
+    { link: "/chart_two", label: "Chart 2" },
+    { link: "/chart_three", label: "Chart 3" },
+
   ];
 
 const userLink = [
@@ -23,23 +24,23 @@ const userLink = [
 const links = [
     {
       link: "#",
-      label: "Contact",
+      label: "",
     },
     {
       link: "#",
-      label: "Privacy",
+      label: "",
     },
     {
       link: "#",
-      label: "Blog",
+      label: "",
     },
     {
       link: "#",
-      label: "Store",
+      label: "",
     },
     {
       link: "#",
-      label: "Careers",
+      label: "",
     },
   ];
 

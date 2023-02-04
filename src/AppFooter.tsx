@@ -1,12 +1,12 @@
-import { createStyles, Anchor, Group, ActionIcon } from "@mantine/core";
+import { createStyles, Anchor, Group, ActionIcon, Image, Text } from "@mantine/core";
 import {
   IconBrandTwitter,
   IconBrandYoutube,
   IconBrandInstagram,
 } from "@tabler/icons";
-import { MantineLogo } from "@mantine/ds";
-import { links } from "./constants";
 
+import { links } from "./constants";
+import Logo from './dt_logo.png';
 const useStyles = createStyles((theme) => ({
   footer: {
     borderTop: `0px ${
@@ -16,7 +16,6 @@ const useStyles = createStyles((theme) => ({
 
   inner: {
     display: "flex",
-    justifyContent: "space-between",
     alignItems: "center",
     padding: `${theme.spacing.md}px ${theme.spacing.md}px`,
 
@@ -51,21 +50,12 @@ export default function AppFooter() {
   return (
     <div className={classes.footer}>
       <div className={classes.inner}>
-        <MantineLogo size={28} />
+        <Image width={40} src={Logo} />
+        <Text pl={10}>Copyright 2023</Text>
 
         <Group className={classes.links}>{items}</Group>
 
-        <Group spacing="xs" position="right" noWrap>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandTwitter size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandYoutube size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandInstagram size={18} stroke={1.5} />
-          </ActionIcon>
-        </Group>
+
       </div>
     </div>
   );
