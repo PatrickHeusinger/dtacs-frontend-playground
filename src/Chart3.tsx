@@ -15,11 +15,11 @@ const series = [
     name: "Lufthansa Group",
     stroke: "#05164D",
     data: [
-      { category: "A", value: 1300 },
-      { category: "B", value: 1400 },
-      { category: "C", value: 1600 },
-      { category: "D", value: 1900 },
-      { category: "E", value: 1700 },
+      { category: "Jan 2022", value: 1300 },
+      { category: "Feb 2022", value: 1400 },
+      { category: "Mar 2022", value: 1600 },
+      { category: "Apr 2022", value: 1900 },
+      { category: "May 2022", value: 1700 },
 
     ]
   },
@@ -27,11 +27,11 @@ const series = [
     name: "Lufthansa Cargo",
     stroke: "#FFAD00",
     data: [
-      { category: "A", value: 2300 },
-      { category: "B", value: 2100 },
-      { category: "C", value: 1900 },
-      { category: "D", value: 2300 },
-      { category: "E", value: 2400 },
+      { category: "Jan 2022", value: 2300 },
+      { category: "Feb 2022", value: 2100 },
+      { category: "Mar 2022", value: 1900 },
+      { category: "Apr 2022", value: 2300 },
+      { category: "May 2022", value: 2400 },
 
     ]
   },
@@ -39,11 +39,11 @@ const series = [
     name: "Lufthansa Technik",
     stroke: "#A9DADB",
     data: [
-      { category: "A", value: 2600 },
-      { category: "B", value: 2650 },
-      { category: "C", value: 2300 },
-      { category: "D", value: 2600 },
-      { category: "E", value: 2400 },
+      { category: "Jan 2022", value: 2600 },
+      { category: "Feb 2022", value: 2650 },
+      { category: "Mar 2022", value: 2300 },
+      { category: "Apr 2022", value: 2600 },
+      { category: "May 2022", value: 2400 },
 
     ]
   }

@@ -71,7 +71,7 @@ const useStyles = createStyles((theme) => ({
     transition: "border-color 100ms ease, color 100ms ease",
 
     "&:hover": {
-      color: theme.colorScheme === "dark" ? theme.white : theme.black,
+      color: '#1883AD',
       textDecoration: "none",
     },
   },
@@ -86,13 +86,13 @@ const useStyles = createStyles((theme) => ({
     transition: "color 100ms ease",
 
     "&:hover": {
-      color: theme.colorScheme === "dark" ? theme.white : theme.black,
+      color: '#1883AD',
       textDecoration: "none",
     },
   },
 
   mainLinkActive: {
-    color: theme.colorScheme === "dark" ? theme.white : theme.black,
+    color: '#1883AD',
     borderBottomColor: '#1883AD'
      // theme.colors[theme.primaryColor][theme.colorScheme === "dark" ? 5 : 6],
   },
