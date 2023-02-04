@@ -17,7 +17,7 @@ const series = [
     data: [
       { category: "A", value: 1300 },
       { category: "B", value: 1400 },
-      { category: "C", value: 1800 },
+      { category: "C", value: 1600 },
       { category: "D", value: 1900 },
       { category: "E", value: 1700 },
 
