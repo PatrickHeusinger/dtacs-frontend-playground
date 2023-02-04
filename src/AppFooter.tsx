@@ -51,7 +51,7 @@ export default function AppFooter() {
     <div className={classes.footer}>
       <div className={classes.inner}>
         <Image width={40} src={Logo} />
-        <Text pl={10}>Copyright 2023</Text>
+        <Text color={'#1983AD'} pl={10}>Copyright 2023</Text>
 
         <Group className={classes.links}>{items}</Group>
 
