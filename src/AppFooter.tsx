@@ -50,8 +50,8 @@ export default function AppFooter() {
   return (
     <div className={classes.footer}>
       <div className={classes.inner}>
-        <Image width={40} src={Logo} />
-        <Text color={'#1983AD'} pl={10}>Copyright 2023</Text>
+        <Image pl={100} width={40} src={Logo} />
+        <Text color={'#1983AD'} pl={50}>Frontend Development Playground</Text>
 
         <Group className={classes.links}>{items}</Group>
 
