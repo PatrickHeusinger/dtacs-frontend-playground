@@ -6,6 +6,7 @@ import Home from './Home';
 import Chart from "./Chart";
 import Chart2  from "./Chart2";
 import Chart3 from "./Chart3";
+import Upload from "./Upload";
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/chart_one" element={<Chart />} />
             <Route path="/chart_two" element={<Chart2 />} />
             <Route path="/chart_three" element={<Chart3 />} />
+            <Route path="/upload" element={<Upload />} />
           </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

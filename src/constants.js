@@ -3,8 +3,10 @@ const mainLinks = [
     { link: "/chart_one", label: "Chart 1" },
     { link: "/chart_two", label: "Chart 2" },
     { link: "/chart_three", label: "Chart 3" },
+    { link: "/upload", label: "Upload" },
 
-  ];
+
+];
 
 const userLink = [
     {
