@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React,{Component} from 'react';
 import './App.css';
-class App extends Component {
+import { useState } from 'react';
+import { FileButton, Button, Group, Text } from '@mantine/core';
+class Upload extends Component {
 
     state = {
 
@@ -64,16 +66,15 @@ class App extends Component {
     render() {
         return (
             <div class="App">
-                <div class="innerApp">
+                <div>
                     <h1>
                         File Upload
                     </h1>
-
                     <div>
-                        <input type="file" onChange={this.onFileChange} />
-                        <button onClick={this.onFileUpload}>
+                        <input class="input" type="file" onChange={this.onFileChange} />
+                        <Button onClick={this.onFileUpload}>
                             Upload!
-                        </button>
+                        </Button>
                     </div>
                     {this.fileData()}
                 </div>
@@ -83,4 +84,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Upload;
